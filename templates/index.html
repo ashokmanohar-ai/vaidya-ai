@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Vaidya AI | Development Foundation</title>
+  <style>
+    :root { font-family: system-ui, -apple-system, Segoe UI, sans-serif; color: #14243a; background: #f5f8fc; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; }
+    header { background: #10264b; color: #fff; padding: 23px max(5vw,20px); }
+    header strong { font-size: 1.14rem; letter-spacing: .03em; }
+    header span { color: #bfd1e8; padding-left: 12px; font-size: .9rem; }
+    main { max-width: 1060px; margin: 0 auto; padding: 52px 22px; }
+    .eyebrow { color: #176f87; text-transform: uppercase; letter-spacing: .14em; font-size: .78rem; font-weight: 700; }
+    h1 { margin: 12px 0; font-size: clamp(2.2rem, 5vw, 4.1rem); line-height: 1.08; letter-spacing: -.045em; }
+    .lead { color: #53657d; max-width: 750px; font-size: 1.12rem; line-height: 1.7; }
+    .banner { display: flex; gap: 12px; align-items: center; background: #fff8ec; border: 1px solid #e9d2a4; padding: 15px 18px; border-radius: 12px; margin: 25px 0 34px; font-size: .94rem; }
+    .grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 17px; }
+    .card { background: white; border: 1px solid #dae4ee; border-radius: 16px; padding: 25px; box-shadow: 0 6px 25px rgba(19,41,72,.035); }
+    .tag { font-weight: 700; color: #0d6685; font-size: .77rem; text-transform: uppercase; letter-spacing: .08em; }
+    h2 { font-size: 1.08rem; margin: 12px 0 9px; }
+    p { line-height: 1.55; }
+    .card p { color: #596b80; margin-bottom: 0; }
+    .links { margin-top: 34px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .links a { color: #fff; background: #153a71; text-decoration: none; padding: 12px 18px; border-radius: 10px; font-weight: 600; }
+    .links a.secondary { background: #fff; color: #153a71; border: 1px solid #b8cadf; }
+    footer { color: #77879d; font-size: .85rem; margin-top: 55px; }
+    @media (max-width:750px){ .grid { grid-template-columns:1fr; } main { padding-top:32px; } header span { display:block; padding:5px 0 0; }}
+  </style>
+</head>
+<body>
+<header><strong>✚ VAIDYA AI</strong><span>Your AI colleague, across every specialty.</span></header>
+<main>
+  <div class="eyebrow">Development foundation · Version 0.1</div>
+  <h1>Smarter medical documentation.<br>Doctor-controlled by design.</h1>
+  <p class="lead">Vaidya AI is being designed to turn clinician dictation and pathology images into consistent, branded report drafts, with human approval and a governed learning loop.</p>
+  <div class="banner"><strong>Development only.</strong><span>This environment has no login, report generation or medical-data processing. Do not upload or submit real patient information.</span></div>
+  <section class="grid" aria-label="Planned capabilities">
+    <article class="card"><div class="tag">01 · Pathology</div><h2>Report generation</h2><p>Planned Tamil/English dictation, structured extraction and doctor-branded DOCX drafts.</p></article>
+    <article class="card"><div class="tag">02 · Human oversight</div><h2>Doctor sign-off</h2><p>Every AI-assisted draft must be reviewed and approved by the authorized clinician.</p></article>
+    <article class="card"><div class="tag">03 · Governed learning</div><h2>Evidence-based improvement</h2><p>Proposed changes from doctor corrections require approval, versioning and rollback.</p></article>
+  </section>
+  <nav class="links" aria-label="Development endpoints">
+    <a href="/health/live">Liveness check</a>
+    <a class="secondary" href="/health/ready">Readiness details</a>
+    <a class="secondary" href="/api/v1/status">Feature status API</a>
+  </nav>
+  <footer>VAIDYA AI · Synthetic-only engineering foundation · Not for clinical use</footer>
+</main>
+</body>
+</html>
