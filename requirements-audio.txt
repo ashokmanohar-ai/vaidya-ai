@@ -1,0 +1,3 @@
+-r requirements.txt
+# Optional CPU ASR. Install only after approving model downloads/storage.
+faster-whisper>=1.1,<2
