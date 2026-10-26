@@ -1,6 +1,6 @@
 # VAIDYA AI — Engineering Release Candidate + Synthetic Demo
 
-**Start here:** [`README_PRODUCTION_ENGINEERING.md`](README_PRODUCTION_ENGINEERING.md) · [`VALIDATION_REPORT_PRODUCTION.md`](VALIDATION_REPORT_PRODUCTION.md) · [`deployment/PRODUCTION_GATES.md`](deployment/PRODUCTION_GATES.md)
+**Shareable snapshot — 26 October 2026:** [`Sharing guide`](docs/SHARING_GUIDE_2026-10-26.md) · [`Changelog`](CHANGELOG.md) · [`Production overview`](README_PRODUCTION_ENGINEERING.md) · [`Validation report`](VALIDATION_REPORT_PRODUCTION.md) · [`Clinical release gates`](deployment/PRODUCTION_GATES.md)
 
 This repository contains a local synthetic demonstration and a separate security-hardened cloud architecture candidate. **Do not process real patients without validated infrastructure, clinician sign-off, and the legally required privacy/regulatory approvals.**
 
@@ -134,6 +134,6 @@ The Bedrock provider never silently falls back to demo extraction after an AWS e
 
 The release report (`VALIDATION_REPORT.md`) separates tests actually run during ZIP creation from tests that require the Windows runtime, live Bedrock, downloaded Whisper weights, and a real clinician. The provided environment did **not** have Flask/LangGraph installed and could not download those dependencies. Domain tests, mocked provider tests, static UI rendering, and ZIP integrity are not a substitute for browser-to-Flask-to-LangGraph real E2E checks.
 
-**Still not production ready:** PostgreSQL checkpoint/database migration, durable cloud job queue, identity lifecycle/MFA and hospital-scale tenant isolation, encrypted private object storage, formal clinical evaluation for Tamil-English, security/regulatory approvals, and verified live AWS performance. This package remains local-only synthetic demo. The included `vercel.json` is not authorization to run the full clinical demo on Vercel Functions.
+**Production boundary as of 26 October 2026:** A separate `production/` engineering candidate implements PostgreSQL-oriented persistence/checkpoints, worker queue, S3 storage adapter and role controls. Implementation does **not** prove end-to-end cloud reliability, tenant security, clinical correctness or regulatory compliance. MFA/SSO, independent reviews, Tamil-English medical validation, live AWS tests, resilience and recovery testing, privacy and clinical approvals remain outstanding. The local demonstration is **synthetic-only**. Do not expose its demo credentials or patient intake through public Vercel hosting; see `deployment/PRODUCTION_GATES.md`.
 
 Never place patient data, bearer tokens, raw transcripts, audio or generated reports in your GitHub repository or a public Vercel deployment.
